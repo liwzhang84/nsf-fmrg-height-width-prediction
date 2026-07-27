@@ -27,3 +27,9 @@ sem/
 *.mat
 *.ASC
 .DS_Store
+thermal/
+height/
+sem/
+*.mat
+*.ASC
+.DS_Store
