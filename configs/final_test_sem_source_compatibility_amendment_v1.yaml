@@ -1,0 +1,60 @@
+{
+  "protocol_version": "final_test_sem_source_compatibility_amendment_v1",
+  "original_model_lock_path": "configs/final_height_width_model_lock_v1.yaml",
+  "original_model_lock_hash": "2fb60cbb83a04ea9819c3bfff9fa39b9765dc9bad74b4a7d0693103af013be1b",
+  "first_blocked_attempt_paths": [
+    "outputs/reports/final_track21_height_width_test_review.md",
+    "outputs/reports/final_track21_height_width_leakage_audit.md",
+    "outputs/reports/final_track21_height_width_build_report.md",
+    "outputs/sem_final_test/track21_sem_source_compatibility.json"
+  ],
+  "first_blocked_attempt_hashes": {
+    "outputs/reports/final_track21_height_width_test_review.md": "9fd8c359c289888d2cb3fffba8e9b4f1d6e37d1f613ded11bb129e1555dead8e",
+    "outputs/reports/final_track21_height_width_leakage_audit.md": "26de63fffc9d77c005972b0c90b0a294a7c5378461e1ce435892c34f02759774",
+    "outputs/reports/final_track21_height_width_build_report.md": "c3eab86af2602d15949065022cc9688f7755d739e5c6cbaa272f23a3e6689753",
+    "outputs/sem_final_test/track21_sem_source_compatibility.json": "f970d9e5dfb59fe6e80e418287631bdb2206a20e35f5c4b52707c384e5b2e1d6"
+  },
+  "amendment_creation_time_utc": "2026-07-26T01:15:49.706015+00:00",
+  "evidence_available_before_amendment": [
+    "filenames",
+    "TIFF dimensions",
+    "TIFF tags",
+    "stage coordinates",
+    "tile IDs",
+    "file hashes",
+    "dataset README tile-side convention"
+  ],
+  "pre_amendment_test_data_statement": "No held-out Height labels, Thermal frames, SEM pixel arrays, predictions, metrics, or human references had been loaded.",
+  "metadata_audit_path": "outputs/sem_final_test_v2/track21_tile14_metadata_compatibility_audit.csv",
+  "metadata_audit_hash": "8e582999e1b5dbc3ba46ebba8f421874d885dfdd3fae99276b578d6e47801637",
+  "generalized_mapping_rule": {
+    "file_discovery": "canonical Plain SEM Track/tile naming convention",
+    "tile_ids": "complete contiguous 1..N",
+    "tile_count": "N may vary by Track",
+    "physical_order": "N,N-1,...,1",
+    "low_x_endpoint": "Tile N is physical x=20.0 mm",
+    "high_x_endpoint": "Tile 01 is physical x=100.0 mm",
+    "mapping": "full ordered mosaic mapped linearly 20.0..100.0 mm",
+    "canonical_dimensions_px": [
+      1024,
+      768
+    ],
+    "structure_compatibility_required": true,
+    "remove_tile_to_force_development_count": false,
+    "target_prediction_or_human_evidence_allowed": false
+  },
+  "prohibited_changes": [
+    "original model lock",
+    "trained coefficients",
+    "ridge alphas",
+    "features",
+    "Height target protocol",
+    "Thermal representation",
+    "SEM mask",
+    "success criteria",
+    "test-specific fitted offset",
+    "nonlinear mapping",
+    "target-driven correction"
+  ],
+  "amendment_content_hash_excluding_hash_field": "cc713e20c385127fc99d00b9f3ac76c383c9a37c0b270d0af78ca189e6828171"
+}

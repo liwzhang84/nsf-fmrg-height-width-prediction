@@ -1,0 +1,48 @@
+policy_id: all_finite_height_estimator_v1
+policy_version: height_label_policy_v1
+frozen_estimator_id: height_boundary_estimator_v1
+frozen_estimator_config: configs/height_boundary_estimator_v1.yaml
+frozen_estimator_config_sha256: 4b1094cf2084f10026cdd470dba7ba3bdf8b561bfef02ba7ef3413e8a555617d
+leveling_method_id: official_robust_plane_v1
+boundary_method_id: gradient_edges
+candidate_parameter_id: threshold_5um_agg_0.1_v1
+aggregation_half_width_mm: 0.10
+target:
+  name: frozen_v1_predicted_deposited_track_width
+  units: mm
+  coordinate_convention: official Height cross-track y; width=y_right-y_left
+primary_policy:
+  id: all_finite_height_estimator_v1
+  requirements:
+    - official_development_height_supported
+    - estimator_id_is_height_boundary_estimator_v1
+    - finite_left_right_and_width
+    - y_right_greater_than_y_left
+    - no_estimator_exclusion_reason
+sensitivity_policies:
+  local_valid_ge_0p50:
+    local_height_valid_fraction_minimum: 0.50
+  side_support_ge_0p50:
+    left_substrate_valid_fraction_minimum: 0.50
+    right_substrate_valid_fraction_minimum: 0.50
+  local_and_side_support_ge_0p50:
+    local_height_valid_fraction_minimum: 0.50
+    left_substrate_valid_fraction_minimum: 0.50
+    right_substrate_valid_fraction_minimum: 0.50
+exclusion_reasons:
+  not_height_supported: official position is outside verified Height support
+  estimator_nonfinite: one or more frozen boundary/width values are nonfinite
+  invalid_boundary_order: predicted right boundary is not greater than left
+  estimator_exclusion: frozen estimator records an explicit exclusion reason
+prohibitions:
+  track_21_use: true
+  human_geometry_for_target_or_eligibility: true
+  fitted_quality_gate: true
+  sample_specific_exceptions: true
+  track_specific_rules_or_thresholds: true
+source_files:
+  predictions: outputs/height_labels/height_boundary_predictions_v1_development.csv
+  support: outputs/mappings/thermal_height_support.csv
+  thermal_mapping: outputs/mappings/thermal_frame_mapping_official.csv
+  human_audit_metadata: outputs/human_review/height_human_reference_v3_development.csv
+code_version: workspace_snapshot_20260725

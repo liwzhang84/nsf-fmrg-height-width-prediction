@@ -1,0 +1,3 @@
+# Thermal representation leakage audit
+
+Only Tracks 8, 10, and 14 were loaded. No SEM or Height-derived input was used. Sample-local normalization used only each current frame. Causal contexts contain the current and preceding official frames only. All training normalization and ridge fitting used outer training Tracks; inner validation swapped complete Tracks. Residual targets were constructed only on training rows after training x-only predictions, and held-out x-only predictions were locked before correction. Human references and symmetric future lags were diagnostic only. No random x split, deep learning, or multimodal processing was used.

@@ -1,0 +1,91 @@
+{
+  "immutable_hashes_before_audit": {
+    "configs/final_height_width_model_lock_v1.yaml": "2fb60cbb83a04ea9819c3bfff9fa39b9765dc9bad74b4a7d0693103af013be1b",
+    "configs/final_test_sem_source_compatibility_amendment_v1.yaml": "3c0de4b78b5417cd60df27bbb9e059bcf27986aaadd8964d14e51dbf831a847a",
+    "outputs/models/final_height_width_v1/cohort_a_fixed_thermal_shape_ridge.json": "9a6c54bb5cce9f63b6b36120a449cbba749851c776fd72d506fc59f9909ebb4c",
+    "outputs/models/final_height_width_v1/cohort_a_training_mean.json": "8368f8b66374d8023d096e048530c3cc625f15541b9d15b2627c3b5149d2b9eb",
+    "outputs/models/final_height_width_v1/cohort_a_x_only.json": "456951c87c787b8b272ec2c75a031865921dd87e05ee0781c85f6f20595222a3",
+    "outputs/models/final_height_width_v1/cohort_b_fixed_thermal_shape_ridge.json": "6cc60cb79b30c0195218b2951b15bd360cb39f5e7b17f917edd48d23f58fb492",
+    "outputs/models/final_height_width_v1/cohort_b_sem_summary_ridge.json": "68299012a94a8bfa5f44ff25224889dad4b550af95447de70eb33f3fe040654b",
+    "outputs/models/final_height_width_v1/cohort_b_sem_summary_upstream_ridge.json": "67fd46ac5fa34153583e3a6c23bf61d924903e74bf3722739c6e815da1f32c1c",
+    "outputs/models/final_height_width_v1/cohort_b_thermal_plus_sem_summary_ridge.json": "19a828ff6aeb46ff048e310d7aa414c23ea21fec2f9b22122abe56e51d4f9c19",
+    "outputs/models/final_height_width_v1/cohort_b_training_mean.json": "b676d98a4b6037f12f2cbc2ee81823b7a65f667a729d1d33e2745e7126e22414",
+    "outputs/models/final_height_width_v1/cohort_b_x_only.json": "bc241ef2c105ee985101e859e585d65e14fd284793f58e743cfb48979eaaf66f",
+    "outputs/models/final_height_width_v1/feature_schema.json": "6b30c23e6ec558e0c7a984897813aac70d5b8acae489ef61e93c812c5f70ce00",
+    "outputs/models/final_height_width_v1/lock_hash.txt": "de718fd9a599dcb08c2bbe5cec6f8b867666bbadbd997f31222495989f51f794",
+    "outputs/reports/final_track21_height_width_test_review.md": "9fd8c359c289888d2cb3fffba8e9b4f1d6e37d1f613ded11bb129e1555dead8e",
+    "outputs/reports/final_track21_height_width_leakage_audit.md": "26de63fffc9d77c005972b0c90b0a294a7c5378461e1ce435892c34f02759774",
+    "outputs/reports/final_track21_height_width_build_report.md": "c3eab86af2602d15949065022cc9688f7755d739e5c6cbaa272f23a3e6689753",
+    "outputs/sem_final_test/track21_sem_source_compatibility.json": "f970d9e5dfb59fe6e80e418287631bdb2206a20e35f5c4b52707c384e5b2e1d6",
+    "outputs/sem_final_test_v2/sem_mapping_v1_track21.csv": "8417981e2eb13b4103471330cfd82e9d434f51e1f96a3503552abcd6667eb01d",
+    "outputs/height_labels/height_labels_v1_track21_final_test.csv": "e802cfcac2404600c77b2d326d06dbb0b3028345ffd817df85c87e187e0638eb",
+    "outputs/manifests/thermal_height_manifest_v1_track21_final_test.csv": "b83273cee4d44213c1baf78b9b80215863d25af7663587048967a411d9d9d03a",
+    "outputs/manifests/sem_height_manifest_v1_track21_final_test.csv": "5a6745b744c54f721fb325c6429b22f54be5f9cbfb1a4b46bfa29db978c19f27",
+    "outputs/models/final_track21_height_width_predictions.csv": "8ef1ad999a56aba522556fe7ed26fe05f281c2f1ab1af87fdd5febfa02cae78d",
+    "outputs/models/final_track21_height_width_metrics.csv": "7a541a5cdd91fc6581f661185a29befc9f91785a6194d439f942131974c8bd13",
+    "outputs/models/final_track21_height_width_cohort_summary.csv": "2eb24a1596261ff0fb35cbd695a6ec8337917c0caf3de1e6288ab069c235e475",
+    "outputs/models/final_track21_height_width_subgroup_metrics.csv": "2266a233720823cd7b1ed77ce120264dc6ee451730cb32b7f7308166ecbf9f9a",
+    "outputs/reports/final_track21_height_width_test_review_v2.md": "b9c1fae8be842973d3689f9eb21c1597a100eb3c01d0a6021a503164478c995b",
+    "outputs/reports/final_track21_height_width_leakage_audit_v2.md": "f9d5a54979fd63eb5b65374809f488a74514030e7f829706e6693c7ef5cbfd2a",
+    "outputs/reports/final_track21_height_width_build_report_v2.md": "e8639be68ad93dfa7504ac46f42f734333365f7331ad940f1fd9ec698ebe29d7"
+  },
+  "immutable_hashes_after_audit": {
+    "configs/final_height_width_model_lock_v1.yaml": "2fb60cbb83a04ea9819c3bfff9fa39b9765dc9bad74b4a7d0693103af013be1b",
+    "configs/final_test_sem_source_compatibility_amendment_v1.yaml": "3c0de4b78b5417cd60df27bbb9e059bcf27986aaadd8964d14e51dbf831a847a",
+    "outputs/models/final_height_width_v1/cohort_a_fixed_thermal_shape_ridge.json": "9a6c54bb5cce9f63b6b36120a449cbba749851c776fd72d506fc59f9909ebb4c",
+    "outputs/models/final_height_width_v1/cohort_a_training_mean.json": "8368f8b66374d8023d096e048530c3cc625f15541b9d15b2627c3b5149d2b9eb",
+    "outputs/models/final_height_width_v1/cohort_a_x_only.json": "456951c87c787b8b272ec2c75a031865921dd87e05ee0781c85f6f20595222a3",
+    "outputs/models/final_height_width_v1/cohort_b_fixed_thermal_shape_ridge.json": "6cc60cb79b30c0195218b2951b15bd360cb39f5e7b17f917edd48d23f58fb492",
+    "outputs/models/final_height_width_v1/cohort_b_sem_summary_ridge.json": "68299012a94a8bfa5f44ff25224889dad4b550af95447de70eb33f3fe040654b",
+    "outputs/models/final_height_width_v1/cohort_b_sem_summary_upstream_ridge.json": "67fd46ac5fa34153583e3a6c23bf61d924903e74bf3722739c6e815da1f32c1c",
+    "outputs/models/final_height_width_v1/cohort_b_thermal_plus_sem_summary_ridge.json": "19a828ff6aeb46ff048e310d7aa414c23ea21fec2f9b22122abe56e51d4f9c19",
+    "outputs/models/final_height_width_v1/cohort_b_training_mean.json": "b676d98a4b6037f12f2cbc2ee81823b7a65f667a729d1d33e2745e7126e22414",
+    "outputs/models/final_height_width_v1/cohort_b_x_only.json": "bc241ef2c105ee985101e859e585d65e14fd284793f58e743cfb48979eaaf66f",
+    "outputs/models/final_height_width_v1/feature_schema.json": "6b30c23e6ec558e0c7a984897813aac70d5b8acae489ef61e93c812c5f70ce00",
+    "outputs/models/final_height_width_v1/lock_hash.txt": "de718fd9a599dcb08c2bbe5cec6f8b867666bbadbd997f31222495989f51f794",
+    "outputs/reports/final_track21_height_width_test_review.md": "9fd8c359c289888d2cb3fffba8e9b4f1d6e37d1f613ded11bb129e1555dead8e",
+    "outputs/reports/final_track21_height_width_leakage_audit.md": "26de63fffc9d77c005972b0c90b0a294a7c5378461e1ce435892c34f02759774",
+    "outputs/reports/final_track21_height_width_build_report.md": "c3eab86af2602d15949065022cc9688f7755d739e5c6cbaa272f23a3e6689753",
+    "outputs/sem_final_test/track21_sem_source_compatibility.json": "f970d9e5dfb59fe6e80e418287631bdb2206a20e35f5c4b52707c384e5b2e1d6",
+    "outputs/sem_final_test_v2/sem_mapping_v1_track21.csv": "8417981e2eb13b4103471330cfd82e9d434f51e1f96a3503552abcd6667eb01d",
+    "outputs/height_labels/height_labels_v1_track21_final_test.csv": "e802cfcac2404600c77b2d326d06dbb0b3028345ffd817df85c87e187e0638eb",
+    "outputs/manifests/thermal_height_manifest_v1_track21_final_test.csv": "b83273cee4d44213c1baf78b9b80215863d25af7663587048967a411d9d9d03a",
+    "outputs/manifests/sem_height_manifest_v1_track21_final_test.csv": "5a6745b744c54f721fb325c6429b22f54be5f9cbfb1a4b46bfa29db978c19f27",
+    "outputs/models/final_track21_height_width_predictions.csv": "8ef1ad999a56aba522556fe7ed26fe05f281c2f1ab1af87fdd5febfa02cae78d",
+    "outputs/models/final_track21_height_width_metrics.csv": "7a541a5cdd91fc6581f661185a29befc9f91785a6194d439f942131974c8bd13",
+    "outputs/models/final_track21_height_width_cohort_summary.csv": "2eb24a1596261ff0fb35cbd695a6ec8337917c0caf3de1e6288ab069c235e475",
+    "outputs/models/final_track21_height_width_subgroup_metrics.csv": "2266a233720823cd7b1ed77ce120264dc6ee451730cb32b7f7308166ecbf9f9a",
+    "outputs/reports/final_track21_height_width_test_review_v2.md": "b9c1fae8be842973d3689f9eb21c1597a100eb3c01d0a6021a503164478c995b",
+    "outputs/reports/final_track21_height_width_leakage_audit_v2.md": "f9d5a54979fd63eb5b65374809f488a74514030e7f829706e6693c7ef5cbfd2a",
+    "outputs/reports/final_track21_height_width_build_report_v2.md": "e8639be68ad93dfa7504ac46f42f734333365f7331ad940f1fd9ec698ebe29d7"
+  },
+  "development_mapping_hashes": {
+    "reconstructed_table_hash": "7f4a936b8faf69baecb176c3f789c529753a191f8f05c935e9d8c8372b8779d2",
+    "native_mask_bound_hash": "953f6849819cfbc1a521bc3c63165706c45d52796751b7d624df15eb06cac3b3"
+  },
+  "development_feature_hashes": {
+    "sem_summary": "4f8473e69b6c05d0049c920676b6cc0891b708bca176c86fd6acc51815033203",
+    "sem_summary_upstream": "661295a1a6383079e9aba2be49220d02ed8671f4ba38755159dd9c17b1ae6810",
+    "per_track": {
+      "8": "b9a889d5ab6f6cd4569da8a9073b9438578589947d42423c0f7e68d5605be13e",
+      "10": "9a753d17936e1c38d275314d14cd42d96b838e080d67d6ea2feba5db031e1fae",
+      "14": "b6c9cc05b1e83dd3532237169d1e90f3f380c52b690bd2510ca01a7858d10bf9"
+    }
+  },
+  "track21_reconstructed_mapping_hashes": {
+    "mapping_table": "d11b7f120869ff3d3004c72a8bbf357e64d7e55ae517ffbf77d4cc8b34f5cfcf",
+    "native_mask_bound_hash": "849defebc6412bd30c461d60e8896a63b6535d8021e4ac085d7b6c7a6105a6c3"
+  },
+  "track21_reconstructed_feature_hashes": {
+    "sem_summary": "276dc5fcfd9e3403e81c00e7b4a4af8d6cec9cb25b55e706a7e470a0bc4d1719",
+    "sem_summary_upstream": "9388ae48631a2527867d55f45c6ae70397c1111e9359a49ccae3c303571d3742"
+  },
+  "prediction_reproduction_maximum_absolute_differences": {
+    "cohort_b_sem_summary_ridge": 0.0,
+    "cohort_b_thermal_plus_sem_summary_ridge": 0.0,
+    "cohort_b_sem_summary_upstream_ridge": 0.0
+  },
+  "mismatch_counts_by_category": {},
+  "first_50_mismatches": [],
+  "overall_status": "GENERALIZED SEM PRODUCTION IMPLEMENTATION EQUIVALENCE PASS"
+}

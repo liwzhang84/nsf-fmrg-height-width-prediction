@@ -1,0 +1,112 @@
+{
+  "protocol_version": "final_track21_result_visualizations_v1",
+  "creation_timestamp_utc": "2026-07-26T03:59:05.919766+00:00",
+  "source_hashes_before": {
+    "configs/final_height_width_model_lock_v1.yaml": "2fb60cbb83a04ea9819c3bfff9fa39b9765dc9bad74b4a7d0693103af013be1b",
+    "configs/final_test_sem_source_compatibility_amendment_v1.yaml": "3c0de4b78b5417cd60df27bbb9e059bcf27986aaadd8964d14e51dbf831a847a",
+    "outputs/models/final_track21_height_width_metrics.csv": "7a541a5cdd91fc6581f661185a29befc9f91785a6194d439f942131974c8bd13",
+    "outputs/models/final_track21_height_width_predictions.csv": "8ef1ad999a56aba522556fe7ed26fe05f281c2f1ab1af87fdd5febfa02cae78d",
+    "outputs/reports/final_track21_height_width_test_review_v2.md": "b9c1fae8be842973d3689f9eb21c1597a100eb3c01d0a6021a503164478c995b",
+    "outputs/reports/final_track21_height_width_leakage_audit_v2.md": "f9d5a54979fd63eb5b65374809f488a74514030e7f829706e6693c7ef5cbfd2a",
+    "outputs/reports/generalized_sem_mapping_production_equivalence_v1.md": "85fb5c67ca540dbb374e5351dcfd0720e65ab360945b629b07f7f5eb5f49c149",
+    "outputs/figures/final_track21_height_width_v2/final_track21_predictions_and_errors.png": "0340de9840b181843d4e31c33234df9ad5e1506b183362adb0081fb81bd9302f"
+  },
+  "source_hashes_after": {
+    "configs/final_height_width_model_lock_v1.yaml": "2fb60cbb83a04ea9819c3bfff9fa39b9765dc9bad74b4a7d0693103af013be1b",
+    "configs/final_test_sem_source_compatibility_amendment_v1.yaml": "3c0de4b78b5417cd60df27bbb9e059bcf27986aaadd8964d14e51dbf831a847a",
+    "outputs/models/final_track21_height_width_metrics.csv": "7a541a5cdd91fc6581f661185a29befc9f91785a6194d439f942131974c8bd13",
+    "outputs/models/final_track21_height_width_predictions.csv": "8ef1ad999a56aba522556fe7ed26fe05f281c2f1ab1af87fdd5febfa02cae78d",
+    "outputs/reports/final_track21_height_width_test_review_v2.md": "b9c1fae8be842973d3689f9eb21c1597a100eb3c01d0a6021a503164478c995b",
+    "outputs/reports/final_track21_height_width_leakage_audit_v2.md": "f9d5a54979fd63eb5b65374809f488a74514030e7f829706e6693c7ef5cbfd2a",
+    "outputs/reports/generalized_sem_mapping_production_equivalence_v1.md": "85fb5c67ca540dbb374e5351dcfd0720e65ab360945b629b07f7f5eb5f49c149",
+    "outputs/figures/final_track21_height_width_v2/final_track21_predictions_and_errors.png": "0340de9840b181843d4e31c33234df9ad5e1506b183362adb0081fb81bd9302f"
+  },
+  "output_paths": [
+    "outputs/figures/final_track21_height_width_v2/final_track21_cohort_b_mae_comparison.png",
+    "outputs/figures/final_track21_height_width_v2/final_track21_cohort_b_mae_comparison.pdf",
+    "outputs/figures/final_track21_height_width_v2/final_track21_sem_improvement_threshold.png",
+    "outputs/figures/final_track21_height_width_v2/final_track21_sem_improvement_threshold.pdf",
+    "outputs/figures/final_track21_height_width_v2/final_track21_predicted_vs_target_scatter.png",
+    "outputs/figures/final_track21_height_width_v2/final_track21_predicted_vs_target_scatter.pdf"
+  ],
+  "output_hashes": {
+    "outputs/figures/final_track21_height_width_v2/final_track21_cohort_b_mae_comparison.png": "17392b6d888753b644ba3a7fc805f867ba5f74aa1c016e5c4dca1f5bf2d66746",
+    "outputs/figures/final_track21_height_width_v2/final_track21_cohort_b_mae_comparison.pdf": "39513e0452112afea7c31aa4af20d3dba4ad3500b40ca195dcc2d3678f4af91f",
+    "outputs/figures/final_track21_height_width_v2/final_track21_sem_improvement_threshold.png": "c4d3987dce0ff35a4bec4b24d1441aaef219c1e041816362a72b583012fc3d7f",
+    "outputs/figures/final_track21_height_width_v2/final_track21_sem_improvement_threshold.pdf": "df1152052f2dfa5ef200693ccc34064a252efc28343baa5d5486a189bcf2d1c9",
+    "outputs/figures/final_track21_height_width_v2/final_track21_predicted_vs_target_scatter.png": "10395132a8b3c0f5214b19db632ae6cf5c4b107c287064f32ba53675bc25c265",
+    "outputs/figures/final_track21_height_width_v2/final_track21_predicted_vs_target_scatter.pdf": "e13a1f76d7051af54de2c05378054159f7026b8d31ea40028946ef9b51c7674b"
+  },
+  "png_dimensions_px": {
+    "outputs/figures/final_track21_height_width_v2/final_track21_cohort_b_mae_comparison.png": [
+      2326,
+      1643
+    ],
+    "outputs/figures/final_track21_height_width_v2/final_track21_sem_improvement_threshold.png": [
+      2096,
+      1640
+    ],
+    "outputs/figures/final_track21_height_width_v2/final_track21_predicted_vs_target_scatter.png": [
+      4344,
+      1627
+    ]
+  },
+  "plotted_row_counts": {
+    "cohort_b_x_only": 233,
+    "cohort_b_sem_summary_ridge": 233,
+    "cohort_b_thermal_plus_sem_summary_ridge": 233
+  },
+  "plotted_model_ids": {
+    "mae_comparison": [
+      "cohort_b_x_only",
+      "cohort_b_fixed_thermal_shape_ridge",
+      "cohort_b_sem_summary_ridge",
+      "cohort_b_thermal_plus_sem_summary_ridge"
+    ],
+    "scatter": [
+      "cohort_b_x_only",
+      "cohort_b_sem_summary_ridge",
+      "cohort_b_thermal_plus_sem_summary_ridge"
+    ]
+  },
+  "metric_values": {
+    "cohort_b_x_only": {
+      "mae_mm": 0.1118561489811449,
+      "rmse_mm": 0.1446202087799069,
+      "pearson_correlation": 0.079034409672772,
+      "r_squared": -0.1249025359319371
+    },
+    "cohort_b_fixed_thermal_shape_ridge": {
+      "mae_mm": 0.1084509327881748,
+      "rmse_mm": 0.1386423425307737,
+      "pearson_correlation": 0.0456894665450123,
+      "r_squared": -0.0338289821050841
+    },
+    "cohort_b_sem_summary_ridge": {
+      "mae_mm": 0.1098367509669706,
+      "rmse_mm": 0.1397143122574602,
+      "pearson_correlation": 0.0587038210887505,
+      "r_squared": -0.0498777263757403
+    },
+    "cohort_b_thermal_plus_sem_summary_ridge": {
+      "mae_mm": 0.110342590016758,
+      "rmse_mm": 0.1414066839815195,
+      "pearson_correlation": 0.0668048636742444,
+      "r_squared": -0.0754662937234667
+    }
+  },
+  "actual_sem_improvement_mm": 0.002019398014174306,
+  "project_defined_predeclared_confirmation_threshold_mm": 0.003355684469434347,
+  "relative_sem_improvement_percent": 1.8053527075339482,
+  "target_standard_deviation_mm_ddof0": 0.13635514710659918,
+  "prediction_standard_deviation_mm_ddof0": {
+    "cohort_b_x_only": 0.006647309063154287,
+    "cohort_b_sem_summary_ridge": 0.0159016787975175,
+    "cohort_b_thermal_plus_sem_summary_ridge": 0.032086806159535464
+  },
+  "narrower_range_note_supported": true,
+  "model_fitting_performed": false,
+  "frozen_result_modified": false,
+  "immutable_file_hash_status": "PASS",
+  "overall_status": "FINAL TRACK21 VISUALIZATIONS READY"
+}

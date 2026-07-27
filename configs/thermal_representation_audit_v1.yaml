@@ -1,0 +1,45 @@
+audit_id: thermal_representation_audit_v1
+version: 1
+development_tracks: [8, 10, 14]
+reserved_track_prohibited: true
+seed: 20260725
+canonical_mapping: outputs/mappings/thermal_frame_mapping_official.csv
+canonical_manifest: outputs/manifests/thermal_height_manifest_v1_development.csv
+primary_target_policy: all_finite_height_estimator_v1
+intensity_units: uncalibrated_thermal_intensity
+sample_local_normalizations:
+  background_subtracted:
+    background_percentile: 10
+  robust_scaled:
+    center_percentile: 50
+    low_percentile: 5
+    high_percentile: 95
+    epsilon: 1.0e-6
+hotspot:
+  threshold_percentile: 95
+  roi_size_pixels: 160
+  padding: zero_after_sample_local_normalization
+  shared_across_tracks: true
+causal_context_lengths: [0, 1, 2, 4]
+causal_direction: current_and_preceding_official_positions_only
+symmetric_lag_diagnostic_offsets: [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+symmetric_lag_is_diagnostic_only: true
+predictive_models:
+  ridge_alphas: [0.1, 1, 10, 100, 1000]
+  representation_grid:
+    - current_absolute
+    - current_background_subtracted
+    - current_robust_scaled
+    - hotspot_centered_absolute
+    - hotspot_centered_relative
+    - thermal_shape_features
+    - causal_context_prev1
+    - causal_context_prev2
+    - causal_context_prev4
+prohibitions:
+  track_specific_roi_or_threshold: true
+  future_frames_in_causal_models: true
+  height_or_human_input_features: true
+  sem_inputs: true
+  random_x_splits: true
+  deep_learning: true

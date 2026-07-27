@@ -1,0 +1,70 @@
+{
+  "protocol_version": "isotherm_anchor_v2",
+  "anchor_definition": "k_star * iso{c_star}_mm_roll",
+  "c_star": 1600,
+  "k_star": 0.9106630763881486,
+  "rolling_half_frames": 10,
+  "candidate_counts": [
+    1300,
+    1400,
+    1500,
+    1600,
+    1800
+  ],
+  "selection_rule": "minimum coefficient of variation of the three development-track ratios median(width)/median(extent)",
+  "development_tracks": [
+    8,
+    10,
+    14
+  ],
+  "per_count_statistics": {
+    "1300": {
+      "ratios": {
+        "8": 0.21572429822993028,
+        "10": 0.21168469126781145,
+        "14": 0.617896551724138
+      },
+      "mean": 0.3484351804072932,
+      "cv": 0.5468595322828398
+    },
+    "1400": {
+      "ratios": {
+        "8": 0.6946148531951641,
+        "10": 0.7568661005878511,
+        "14": 0.8686301798279906
+      },
+      "mean": 0.7733703778703354,
+      "cv": 0.09309076816731204
+    },
+    "1500": {
+      "ratios": {
+        "8": 0.7680114576702738,
+        "10": 0.8235692963752664,
+        "14": 0.9447091836734693
+      },
+      "mean": 0.8454299792396699,
+      "cv": 0.08726228754033845
+    },
+    "1600": {
+      "ratios": {
+        "8": 0.8269677861549006,
+        "10": 0.8913553846153844,
+        "14": 1.0136660583941606
+      },
+      "mean": 0.9106630763881486,
+      "cv": 0.08502852947531739
+    },
+    "1800": {
+      "ratios": {
+        "8": 0.9210274809160305,
+        "10": 0.9853418367346937,
+        "14": 1.132495412844037
+      },
+      "mean": 1.0129549101649202,
+      "cv": 0.08737989477620313
+    }
+  },
+  "source_module": "src/thermal_isotherm_features_v2.py",
+  "source_module_hash": "5ba1487082185de9ba531896fa4f05da1217301c37c84cdd13068dc56dc2b552",
+  "development_labels_hash": "be7fcdf8580ec6c99f262304e6c197c8a49ae2d7a3639d899b06bb3862ca8dee"
+}

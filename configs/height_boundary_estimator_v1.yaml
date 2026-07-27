@@ -1,0 +1,51 @@
+schema_version: height_boundary_estimator_config_v1
+software_version: height_boundary_estimator_v1
+frozen: true
+estimator_id: height_boundary_estimator_v1
+leveling:
+  implementation_id: official_robust_plane_v1
+  source_module: nsf_fmrg_data.py
+  source_function: robust_plane_detrend
+  input_height_units: mm
+  output_height_units: mm
+  stride_x_pixels: 40
+  stride_y_pixels: 2
+boundary:
+  implementation_id: gradient_edges
+  source_module: src/height_boundary_estimator_v1.py
+  source_function: predict
+  candidate_parameter_id: threshold_5um_agg_0.1_v1
+  legacy_threshold_value: 5.0
+  legacy_threshold_units: um
+  note: legacy threshold is encoded in the candidate ID but is not used by gradient_edges
+aggregation:
+  convention: median of Height columns in official-coordinate half-open index window
+  half_width: 0.10
+  units: mm
+  source_function: src.human_review.data_access.profile
+smoothing:
+  type: NaN-aware normalized Gaussian
+  sigma_pixels: 2.0
+  minimum_finite_profile_samples: 5
+  minimum_normalized_weight: 0.25
+gradient:
+  interpolation_policy: linear interpolation only for gradient calculation after smoothing
+  derivative_coordinate: official cross-track y in mm
+  minimum_finite_processed_samples: 20
+search:
+  central_candidate_range_mm: [0.50, 1.45]
+  left_gradient_range_mm: [0.50, 0.975]
+  right_gradient_range_mm: [0.975, 1.45]
+  left_rule: maximum signed dz/dy
+  right_rule: minimum signed dz/dy
+validity:
+  height_window_must_be_officially_supported: true
+  NaN_policy: ignore NaNs in aggregation; normalized smoothing; reject if processed support is insufficient
+coordinates:
+  y_convention: increasing official cross-track y in mm
+  left_boundary: smaller y coordinate
+  right_boundary: larger y coordinate
+  crossing_policy: reject
+formulas:
+  width_mm: predicted_y_right_mm - predicted_y_left_mm
+  center_mm: (predicted_y_left_mm + predicted_y_right_mm) / 2

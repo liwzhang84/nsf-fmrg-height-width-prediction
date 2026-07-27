@@ -1,0 +1,12 @@
+{
+  "protocol_version": "sem_mask_protocol_deadline_v1",
+  "primary_protocol_id": "symmetric_two_strip_1mm_mask0p4mm_v1",
+  "sensitivity_protocol_id": "upstream_only_1mm_mask0p4mm_v1",
+  "units": "millimeters",
+  "central_exclusion_half_width_mm": 0.4,
+  "upstream_context_mm": 1.0,
+  "downstream_context_mm": 1.0,
+  "mask_in_native_coordinates_before_resize": true,
+  "inpainting": false,
+  "target_pixels_in_context": false
+}

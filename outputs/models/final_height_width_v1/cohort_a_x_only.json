@@ -1,0 +1,41 @@
+{
+  "artifact_version": "final_height_width_v1",
+  "model_id": "cohort_a_x_only",
+  "lock_hash": "2fb60cbb83a04ea9819c3bfff9fa39b9765dc9bad74b4a7d0693103af013be1b",
+  "feature_names": [
+    "x_actual_mm",
+    "x_actual_mm_squared"
+  ],
+  "imputation_values": [
+    61.5,
+    3782.25
+  ],
+  "scaler_mean": [
+    61.487359307359306,
+    4275.7359913419905
+  ],
+  "scaler_scale": [
+    22.249508685579674,
+    2770.315168157667
+  ],
+  "intercept": 0.7535874666666663,
+  "coefficients": [
+    -0.004665190432555621,
+    -0.005819797404071691
+  ],
+  "ridge_alpha": 1000.0,
+  "intercept_policy": "unpenalized",
+  "training_sample_count": 1155,
+  "training_track_counts": {
+    "8": 391,
+    "10": 379,
+    "14": 385
+  },
+  "source_hashes": {
+    "development_labels": "3e88a1dd05e6b33c7144f2f4db96970b521429d28248ed7acd91c074f1e5c49f",
+    "development_sem_manifest": "b5d2bed4ca9a1634e633ba46e01df1dcc9664d714db17f64d2677492fcf2938b",
+    "confirmation": "90c6ae9ce1b0cfc094db197c117369df45f91d7ec9f257d798417428e3d9649c",
+    "model_lock": "2fb60cbb83a04ea9819c3bfff9fa39b9765dc9bad74b4a7d0693103af013be1b"
+  },
+  "software_version": "numpy-transparent-ridge-v1"
+}

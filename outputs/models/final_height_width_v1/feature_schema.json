@@ -1,0 +1,8 @@
+{
+  "x_only": [
+    "x_actual_mm",
+    "x_actual_mm_squared"
+  ],
+  "thermal_shape_features": "fixed_predevelopment_shape_features",
+  "sem_context_summary": "fixed_label_free_retained_context_summary"
+}

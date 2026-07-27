@@ -1,0 +1,15 @@
+release directory: ${PROJECT_ROOT}/github_release/nsf-fmrg-height-width-prediction-v1
+total included file count: 111
+total release size: 5807391 bytes
+excluded raw-data directories: 5
+sanitized files: 8
+model-lock hash verification: PASS
+amendment hash verification: PASS
+largest included file: outputs/manifests/thermal_height_manifest_v1_development.csv (936222 bytes)
+files above 50 MB: none
+scripts compile status: PASS
+documentation-link status: PASS
+privacy/secret scan status: PASS
+immutable scientific result status: SEM IMPROVEMENT NOT CONFIRMED ON FINAL TRACK 21
+Git initialization status: initialized on main; all files staged; commit created
+overall packaging status: GITHUB RELEASE PACKAGE READY

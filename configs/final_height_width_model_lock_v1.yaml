@@ -1,0 +1,291 @@
+{
+  "protocol_version": "final_height_width_model_lock_v1",
+  "created_before_final_test_source_open": true,
+  "development_tracks": [
+    8,
+    10,
+    14
+  ],
+  "final_test_track": 21,
+  "target": {
+    "height_estimator": "height_boundary_estimator_v1",
+    "height_estimator_hash": "4b1094cf2084f10026cdd470dba7ba3bdf8b561bfef02ba7ef3413e8a555617d",
+    "label_policy": "all_finite_height_estimator_v1",
+    "label_policy_config_hash": "5b568d33b06761ffdce9c35fd75fa03307c6ec8dcdb4cd510e7513d39e96c994"
+  },
+  "mapping": {
+    "confirmation_file": "configs/sem_mapping_engineering_confirmation_final_v1.yaml",
+    "confirmation_hash": "90c6ae9ce1b0cfc094db197c117369df45f91d7ec9f257d798417428e3d9649c",
+    "mapping_type": "full_mosaic_endpoint_linear_fallback",
+    "along_track_axis": "horizontal",
+    "increasing_x_direction": "left_to_right",
+    "tile_order": [
+      13,
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "physical_interval_mm": [
+      20.0,
+      100.0
+    ]
+  },
+  "mask": {
+    "protocol_id": "symmetric_two_strip_1mm_mask0p4mm_v1",
+    "central_exclusion_half_width_mm": 0.4,
+    "upstream_context_mm": 1.0,
+    "downstream_context_mm": 1.0,
+    "mask_before_preprocessing": true
+  },
+  "representations": {
+    "x_only": [
+      "x_actual_mm",
+      "x_actual_mm_squared"
+    ],
+    "thermal_shape_features": "fixed_predevelopment_shape_features",
+    "sem_context_summary": "fixed_label_free_retained_context_summary"
+  },
+  "models": {
+    "required": [
+      "training_mean",
+      "x_only",
+      "fixed_thermal_shape_ridge",
+      "sem_summary_ridge",
+      "thermal_plus_sem_summary_ridge"
+    ],
+    "sensitivity": [
+      "sem_summary_upstream_ridge"
+    ],
+    "ridge_alpha_grid": [
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0
+    ],
+    "cohort_a_alphas": {
+      "x_only": 1000.0,
+      "fixed_thermal_shape_ridge": 1000.0
+    },
+    "cohort_b_alphas": {
+      "x_only": 1000.0,
+      "fixed_thermal_shape_ridge": 1000.0,
+      "sem_summary_ridge": 1000.0,
+      "thermal_plus_sem_summary_ridge": 1000.0,
+      "sem_summary_upstream_ridge": 100.0
+    },
+    "missing_value_handling": "training-cohort feature median",
+    "scaling": "training-cohort mean/std",
+    "intercept_policy": "unpenalized",
+    "seed": 20260725,
+    "software_version": "numpy-transparent-ridge-v1"
+  },
+  "cohorts": {
+    "A": "all primary_label_eligible frozen-v1 development rows",
+    "B": "primary_label_eligible and leakage-safe SEM input available; fixed Thermal available when required"
+  },
+  "success_rules": {
+    "primary": "sem_summary_ridge versus cohort-matched x_only; MAE reduction >= max(0.003 mm, 3%) without material bias worsening or tiny-region concentration",
+    "secondary": "thermal_plus_sem_summary_ridge versus sem_summary_ridge; MAE reduction >= 0.002 mm without material bias worsening"
+  },
+  "development_alpha_selection_audit": {
+    "x_only": {
+      "0.1": [
+        0.1097759696477333,
+        0.0993499911296386,
+        0.10119597442304448
+      ],
+      "1.0": [
+        0.10970333471767292,
+        0.09922396687557092,
+        0.10100798845958939
+      ],
+      "10.0": [
+        0.10946908151373308,
+        0.09872961640606165,
+        0.10057759301703174
+      ],
+      "100.0": [
+        0.10939271820500047,
+        0.0982871007621017,
+        0.10034180656043525
+      ],
+      "1000.0": [
+        0.10969438856164611,
+        0.0978168374513879,
+        0.09990830665224197
+      ]
+    },
+    "fixed_thermal_shape_ridge": {
+      "0.1": [
+        0.20719202313652565,
+        0.09980435807351434,
+        0.10902798975704993
+      ],
+      "1.0": [
+        0.15094067669961864,
+        0.09900686686684729,
+        0.10176675106595814
+      ],
+      "10.0": [
+        0.12609241583062472,
+        0.09934812637342857,
+        0.09878819235791227
+      ],
+      "100.0": [
+        0.10328957087393663,
+        0.09890062308152421,
+        0.10021214021790513
+      ],
+      "1000.0": [
+        0.10157732848762066,
+        0.09824410686022662,
+        0.09760229504419153
+      ]
+    },
+    "sem_summary_ridge": {
+      "0.1": [
+        0.10607640904256532,
+        0.0993019515236441,
+        0.11307192521486599
+      ],
+      "1.0": [
+        0.09954310768033042,
+        0.09793670686562908,
+        0.1090318541256793
+      ],
+      "10.0": [
+        0.09607488515958601,
+        0.0974259791725879,
+        0.1057834861906197
+      ],
+      "100.0": [
+        0.09521081522426003,
+        0.09735372871354658,
+        0.10110188991058189
+      ],
+      "1000.0": [
+        0.09835581130597938,
+        0.09609444218268438,
+        0.09828974261589808
+      ]
+    },
+    "thermal_plus_sem_summary_ridge": {
+      "0.1": [
+        0.11845697637431231,
+        0.09880995798039495,
+        0.12174769095273133
+      ],
+      "1.0": [
+        0.10480667324269649,
+        0.09607638071048916,
+        0.110699833742824
+      ],
+      "10.0": [
+        0.1018950470667836,
+        0.09693675058165682,
+        0.10637820979094988
+      ],
+      "100.0": [
+        0.09711871965443178,
+        0.09748066428846203,
+        0.10157481012887079
+      ],
+      "1000.0": [
+        0.09656476134525495,
+        0.0960520835683681,
+        0.09816090173247782
+      ]
+    },
+    "sem_summary_upstream_ridge": {
+      "0.1": [
+        0.10493610168635238,
+        0.09697124707262604,
+        0.11431595266386012
+      ],
+      "1.0": [
+        0.10308516661477804,
+        0.09639426117909518,
+        0.11059885131954336
+      ],
+      "10.0": [
+        0.09990705082232543,
+        0.09615579721815762,
+        0.10537003258123735
+      ],
+      "100.0": [
+        0.1000283951107897,
+        0.09590866973230996,
+        0.10039531754622058
+      ],
+      "1000.0": [
+        0.10397993172543002,
+        0.09569618911136968,
+        0.09832563612170919
+      ]
+    },
+    "cohort_a_x_only": {
+      "0.1": [
+        0.10685711980854265,
+        0.10378196929250849,
+        0.10276940887869698
+      ],
+      "1.0": [
+        0.10681249157420797,
+        0.10355278858729655,
+        0.10272541321219686
+      ],
+      "10.0": [
+        0.10659333192718001,
+        0.10254351377129729,
+        0.10257188073796668
+      ],
+      "100.0": [
+        0.10643802428108207,
+        0.10156761141205967,
+        0.10253985358379897
+      ],
+      "1000.0": [
+        0.10668972743908937,
+        0.10021734626990635,
+        0.10248334701637125
+      ]
+    },
+    "cohort_a_fixed_thermal_shape_ridge": {
+      "0.1": [
+        0.24379770967579584,
+        0.10574379806985844,
+        0.10787534318323694
+      ],
+      "1.0": [
+        0.14037941282994054,
+        0.10477928207927853,
+        0.10973800005030614
+      ],
+      "10.0": [
+        0.10383366987179911,
+        0.10077267719299397,
+        0.10975958580123663
+      ],
+      "100.0": [
+        0.0962974799106891,
+        0.09906172972130178,
+        0.10305835716200679
+      ],
+      "1000.0": [
+        0.09732731180775388,
+        0.09948964739041677,
+        0.10142049928691516
+      ]
+    }
+  }
+}

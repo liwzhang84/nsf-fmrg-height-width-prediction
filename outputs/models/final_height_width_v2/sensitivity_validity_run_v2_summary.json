@@ -1,0 +1,23 @@
+{
+  "study": "validity_run_label_sensitivity_v2",
+  "anchor": {
+    "c_star": 1400,
+    "k_star": 0.8585790526733863,
+    "dev_ratio_cv": 0.025710935071725335
+  },
+  "n_test": 362,
+  "mae_mm": {
+    "x_only": 0.3797948888380664,
+    "anchor_only": 0.08337504718366724,
+    "anchor_residual": 0.1134602239045142
+  },
+  "coverage90": 0.9060773480662984,
+  "delta_mae_mm": 0.2663346649335522,
+  "relative_improvement": 0.701259213225246,
+  "ci95_mm": [
+    0.2484710006329266,
+    0.28122420014469846
+  ],
+  "confirmed": true,
+  "note": "Sensitivity study under an alternative label estimator; the primary v2 result uses the frozen gradient-edge labels and is reported separately."
+}

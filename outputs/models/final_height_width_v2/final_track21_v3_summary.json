@@ -1,0 +1,24 @@
+{
+  "lock_hash": "8f18122e2192d714ce2e8b3766c3e993ac15d933df2b1fd7c191c274082622de",
+  "verdicts": {
+    "cohort_A": {
+      "delta_mae_mm": -0.012903203188916662,
+      "relative_improvement": -0.10724177627374742,
+      "ci95_mm": [
+        -0.023102951847657746,
+        -0.003798277724432833
+      ],
+      "confirmed": false
+    },
+    "cohort_B": {
+      "delta_mae_mm": -0.020049908663495486,
+      "relative_improvement": -0.1792472639736166,
+      "ci95_mm": [
+        -0.03126464786009978,
+        -0.007311299184743737
+      ],
+      "confirmed": false
+    }
+  },
+  "status_note": "Post-registration protocol revision: track 21 was already opened once by the v1 final test, so the v2 evaluation is a protocol revision, not a second independent confirmation. Every numerical choice in this lock derives from the development tracks only."
+}

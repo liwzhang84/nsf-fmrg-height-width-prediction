@@ -1,0 +1,54 @@
+{
+  "protocol_version": "final_height_width_model_lock_v2",
+  "note": "Post-registration protocol revision: track 21 was already opened once by the v1 final test, so the v2 evaluation is a protocol revision, not a second independent confirmation. Every numerical choice in this lock derives from the development tracks only.",
+  "inherits": "configs/final_height_width_model_lock_v1.yaml",
+  "v1_lock_hash": "2fb60cbb83a04ea9819c3bfff9fa39b9765dc9bad74b4a7d0693103af013be1b",
+  "development_tracks": [
+    8,
+    10,
+    14
+  ],
+  "final_test_track": 21,
+  "anchor": {
+    "file": "configs/isotherm_anchor_v2.yaml",
+    "hash": "751504bb5d241c50abb4fb4bf27b4a19a966a00308b0e49b7cb45fb50e52a0c8",
+    "c_star": 1600,
+    "k_star": 0.9106630763881486,
+    "column": "iso1600_mm_roll"
+  },
+  "model": {
+    "structure": "width = anchor + linear_quantile(residual)",
+    "features": [
+      "x_actual_mm",
+      "x_actual_mm_squared",
+      "iso1300_mm",
+      "iso1400_mm",
+      "iso1500_mm",
+      "iso1600_mm",
+      "iso1800_mm",
+      "iso1300_mm_roll",
+      "iso1400_mm_roll",
+      "iso1500_mm_roll",
+      "iso1600_mm_roll",
+      "iso1800_mm_roll"
+    ],
+    "quantiles": [
+      0.05,
+      0.25,
+      0.5,
+      0.75,
+      0.95
+    ],
+    "alpha": 0.01,
+    "solver": "highs",
+    "selected_by": "mean LOTO pinball over development tracks"
+  },
+  "s_level_mm": 0.11825184627672898,
+  "level_inflation": "Q(q) = Q(0.5) + sign(z_q)*sqrt((Q(q)-Q(0.5))^2 + (z_q*s_level)^2)",
+  "confirmation_criterion_v2": {
+    "statement": "Improvement over x_only confirmed iff the 95% moving-block bootstrap CI lower bound of dMAE(x_only - anchor_residual) exceeds 0 and the relative MAE improvement is at least 5%.",
+    "block_positions": 25,
+    "n_bootstrap": 2000,
+    "seed": 0
+  }
+}

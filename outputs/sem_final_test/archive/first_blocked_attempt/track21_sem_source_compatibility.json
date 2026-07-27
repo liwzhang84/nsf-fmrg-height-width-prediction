@@ -1,0 +1,133 @@
+{
+  "compatible": false,
+  "locked_expected_tile_order": [
+    13,
+    12,
+    11,
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+  ],
+  "observed": [
+    {
+      "tile_id": 1,
+      "filename": "Plain_SEM_21_01.tif",
+      "width_px": 1024,
+      "height_px": 768,
+      "mode": "P",
+      "file_hash": "78939dd0fe3fce01d238b06deeba7f1f8d5b33ceed282b00f80f0da9ee7d4ddb"
+    },
+    {
+      "tile_id": 2,
+      "filename": "Plain_SEM_21_02.tif",
+      "width_px": 1024,
+      "height_px": 768,
+      "mode": "P",
+      "file_hash": "2ef3cd640b8ab2bc160122ea31a63a5ba94f7f9de465c4afd72aabe008e257e5"
+    },
+    {
+      "tile_id": 3,
+      "filename": "Plain_SEM_21_03.tif",
+      "width_px": 1024,
+      "height_px": 768,
+      "mode": "P",
+      "file_hash": "7dd8fa1abe47ca0e86e81ee523eea2ea44e997ac62f1cb05d03d2a46757cad50"
+    },
+    {
+      "tile_id": 4,
+      "filename": "Plain_SEM_21_04.tif",
+      "width_px": 1024,
+      "height_px": 768,
+      "mode": "P",
+      "file_hash": "50dd61b064b4a2418e9d599bbc24aee1b89aa29434c97109db3cd1d1a377e0ef"
+    },
+    {
+      "tile_id": 5,
+      "filename": "Plain_SEM_21_05.tif",
+      "width_px": 1024,
+      "height_px": 768,
+      "mode": "P",
+      "file_hash": "5ca52b59861fd2b18d883a1c1967587dad1dafa24eee52bd8229e79dd7428a3c"
+    },
+    {
+      "tile_id": 6,
+      "filename": "Plain_SEM_21_06.tif",
+      "width_px": 1024,
+      "height_px": 768,
+      "mode": "P",
+      "file_hash": "e70f34688364b86ad56166035ec304fc131f65dbb846808d00dd950d8ba3aef1"
+    },
+    {
+      "tile_id": 7,
+      "filename": "Plain_SEM_21_07.tif",
+      "width_px": 1024,
+      "height_px": 768,
+      "mode": "P",
+      "file_hash": "40cf9955ea582ff29b05a0fe111a0bdb5670ebf98c37be4407561008097a4927"
+    },
+    {
+      "tile_id": 8,
+      "filename": "Plain_SEM_21_08.tif",
+      "width_px": 1024,
+      "height_px": 768,
+      "mode": "P",
+      "file_hash": "bfb34cc58944bbc55bd0a0e33f372083e4d61ce001830179b5df76f84332d878"
+    },
+    {
+      "tile_id": 9,
+      "filename": "Plain_SEM_21_09.tif",
+      "width_px": 1024,
+      "height_px": 768,
+      "mode": "P",
+      "file_hash": "f355528c1171e97003af290b172780be92d1e942d49b3905071c5b16c98e2e25"
+    },
+    {
+      "tile_id": 10,
+      "filename": "Plain_SEM_21_10.tif",
+      "width_px": 1024,
+      "height_px": 768,
+      "mode": "P",
+      "file_hash": "3145206f664d8893fdb8d7e1334c186da95b65aab3cdd9dd91857dd8cb260e8e"
+    },
+    {
+      "tile_id": 11,
+      "filename": "Plain_SEM_21_11.tif",
+      "width_px": 1024,
+      "height_px": 768,
+      "mode": "P",
+      "file_hash": "9bfd1369ecea5ddca4395d6095def6f30d00a8d5cdebea7fb04b879149964ed1"
+    },
+    {
+      "tile_id": 12,
+      "filename": "Plain_SEM_21_12.tif",
+      "width_px": 1024,
+      "height_px": 768,
+      "mode": "P",
+      "file_hash": "0afa4ea2d3520acdc55181f1783a2d708a30459b07016d9ff7a30760b71d6e14"
+    },
+    {
+      "tile_id": 13,
+      "filename": "Plain_SEM_21_13.tif",
+      "width_px": 1024,
+      "height_px": 768,
+      "mode": "P",
+      "file_hash": "65a8a2b8546113af772b48d583030e172934380c7a56ece0d9852cd7a3973a81"
+    },
+    {
+      "tile_id": 14,
+      "filename": "Plain_SEM_21_14.tif",
+      "width_px": 1024,
+      "height_px": 768,
+      "mode": "P",
+      "file_hash": "fa265db897feb349597d5fa22e2d131533104c5a18d75557acad782ac2d2dffb"
+    }
+  ],
+  "reason": "Locked-protocol incompatibility: expected exactly tiles 01\u201313 with 1024\u00d7768 payloads; observed tiles [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]. No held-out-specific alternative mapping is permitted."
+}

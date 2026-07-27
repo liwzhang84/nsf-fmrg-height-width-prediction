@@ -1,0 +1,47 @@
+{
+  "protocol_version": "sem_mapping_engineering_confirmation_v1",
+  "tracks": {
+    "8": {
+      "confirmed": true,
+      "along_track_axis": "horizontal",
+      "increasing_x_direction": "left_to_right",
+      "tile_order": [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+      "physical_x_min_mm": 20.0,
+      "physical_x_max_mm": 100.0,
+      "mapping_type": "full_mosaic_endpoint_linear_fallback",
+      "mapping_source": "README physical interval + documented tile order + TIFF stage coordinates + static engineering QA",
+      "confidence": "low",
+      "qa_figure": "outputs/figures/sem_mapping_deadline_qa/track_8_mapping_qa.png",
+      "rationale": "The deposited-track direction is horizontal. The documented tile sequence places Tile 13 on the physical 20 mm side and Tile 01 on the physical 100 mm side. Therefore, the assembled full-mosaic coordinate increases from left to right. This mapping was confirmed from source ordering, TIFF stage-coordinate evidence, and static mapping QA without using Height labels or model performance.",
+      "limitations": "This is a deadline endpoint-linear full-mosaic mapping. Adjacent-tile overlaps were not registered with high precision, so local x uncertainty may be larger near tile boundaries. Border and tile-boundary cases must remain explicitly flagged in the manifest."
+    },
+    "10": {
+      "confirmed": true,
+      "along_track_axis": "horizontal",
+      "increasing_x_direction": "left_to_right",
+      "tile_order": [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+      "physical_x_min_mm": 20.0,
+      "physical_x_max_mm": 100.0,
+      "mapping_type": "full_mosaic_endpoint_linear_fallback",
+      "mapping_source": "README physical interval + documented tile order + TIFF stage coordinates + static engineering QA",
+      "confidence": "low",
+      "qa_figure": "outputs/figures/sem_mapping_deadline_qa/track_10_mapping_qa.png",
+      "rationale": "The deposited-track direction is horizontal. The documented tile sequence places Tile 13 on the physical 20 mm side and Tile 01 on the physical 100 mm side. Therefore, the assembled full-mosaic coordinate increases from left to right. This mapping was confirmed from source ordering, TIFF stage-coordinate evidence, and static mapping QA without using Height labels or model performance.",
+      "limitations": "This is a deadline endpoint-linear full-mosaic mapping. Adjacent-tile overlaps were not registered with high precision, so local x uncertainty may be larger near tile boundaries. Border and tile-boundary cases must remain explicitly flagged in the manifest."
+    },
+    "14": {
+      "confirmed": true,
+      "along_track_axis": "horizontal",
+      "increasing_x_direction": "left_to_right",
+      "tile_order": [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+      "physical_x_min_mm": 20.0,
+      "physical_x_max_mm": 100.0,
+      "mapping_type": "full_mosaic_endpoint_linear_fallback",
+      "mapping_source": "README physical interval + documented tile order + TIFF stage coordinates + static engineering QA",
+      "confidence": "low",
+      "qa_figure": "outputs/figures/sem_mapping_deadline_qa/track_14_mapping_qa.png",
+      "rationale": "The deposited-track direction is horizontal. The documented tile sequence places Tile 13 on the physical 20 mm side and Tile 01 on the physical 100 mm side. Therefore, the assembled full-mosaic coordinate increases from left to right. This mapping was confirmed from source ordering, TIFF stage-coordinate evidence, and static mapping QA without using Height labels or model performance.",
+      "limitations": "This is a deadline endpoint-linear full-mosaic mapping. Adjacent-tile overlaps were not registered with high precision, so local x uncertainty may be larger near tile boundaries. Border and tile-boundary cases must remain explicitly flagged in the manifest."
+    }
+  }
+}
