@@ -97,68 +97,54 @@ the reduction did not reach the project-defined predeclared confirmation thresho
 Adding the fixed Thermal representation did not improve upon the SEM-only model.
 See [Terminology and interpretation](docs/TERMINOLOGY_AND_INTERPRETATION.md).
 
-## v2 protocol cycle: probabilistic isotherm-anchor models
+## v2: isotherm-anchor quantile models
 
-A second, additive protocol cycle extends the frozen v1 workflow. Nothing
-from v1 is modified; all v1 hashes remain valid. New pieces:
+The v2 cycle adds a physics-anchored probabilistic width model. The
+cross-track extent of a fixed-count isotherm is measured in each thermal
+frame; since the deposited width is set by the solidification isotherm,
+this extent is a width proxy that does not depend on laser power. A linear
+anchor `width ~ k* x iso_extent` is calibrated on the development tracks
+(frozen labels: c* = 1600, k* = 0.911), and linear quantile regressions
+(q = 0.05...0.95) model the residual, so the output is a predictive
+distribution rather than a point estimate. Interval width is corrected
+with a level-uncertainty term from leave-one-track-out validation
+(s_level = 0.118 mm). Confirmation now uses a paired moving-block
+bootstrap (5 mm blocks, 2000 resamples) instead of a fixed-mm threshold:
+confirmed only if the 95% CI of dMAE stays above 0 and the relative gain
+is at least 5%.
 
-- `src/thermal_isotherm_features_v2.py`: cross-track extents of fixed-count
-  isotherms (1300-1800 counts) per thermal frame, plus +-2 mm rolling means.
-  These are in-situ quantities and cannot leak the target.
-- `scripts/freeze_isotherm_anchor_v2.py`: development-only calibration of a
-  linear width anchor, `anchor(x) = k* x iso_extent(x)`. The count with the
-  most consistent width/extent ratio across the three development tracks is
-  selected; on the frozen gradient-edge labels this gives c* = 1600,
-  k* = 0.911 (dev ratio CV 8.5%).
-- `scripts/freeze_final_height_width_model_v2.py`: five linear quantile
-  regressions (q = 0.05...0.95) on the residual `width - anchor`, stored in
-  the same JSON artifact schema as the v1 ridge models. Regularization is
-  picked by leave-one-track-out pinball loss; the fold-level median errors
-  give a level-uncertainty scale (`s_level = 0.118 mm`) used to widen the
-  test-time quantiles.
-- `scripts/run_final_track21_height_width_test_v3.py`: one evaluation on the
-  frozen track-21 labels, with pinball / CRPS / coverage metrics and a
-  paired moving-block bootstrap (5 mm blocks, 2000 resamples) replacing the
-  fixed-mm threshold. Criterion: CI lower bound of dMAE > 0 and relative
-  improvement >= 5%.
+Track 21 was already opened by the v1 test, so this run is a protocol
+revision, not a fresh single-shot test. This is recorded in the v2 lock.
 
-Because track 21 was already opened by the v1 final test, the v2 run is a
-post-registration protocol revision, not a second independent single-shot
-confirmation. This is recorded in the v2 lock and in
-`docs/TERMINOLOGY_AND_INTERPRETATION.md`.
-
-### v2 results on the frozen (gradient-edge) labels
+### Result on the frozen labels
 
 | Model | Cohort-A MAE | Cohort-B MAE |
 |---|---:|---:|
-| training_mean | 0.1207 mm | 0.1125 mm |
 | x_only | 0.1203 mm | 0.1119 mm |
-| thermal_v1 (frozen ridge) | 0.1175 mm | 0.1085 mm |
+| thermal_v1 | 0.1175 mm | 0.1085 mm |
 | anchor_only | 0.3167 mm | 0.3226 mm |
 | anchor_residual | 0.1332 mm | 0.1319 mm |
 
-dMAE(x_only - anchor_residual) = -0.013 mm (Cohort A), 95% CI
-[-0.023, -0.004]:
+dMAE(x_only - anchor_residual) = -0.013 mm, CI [-0.023, -0.004]:
 
-**ANCHOR IMPROVEMENT NOT CONFIRMED ON FINAL TRACK 21 (primary labels)**
+**NOT CONFIRMED.** The frozen label widths barely change with laser power
+(0.741 / 0.773 / 0.804 mm at 200-400 W), so there is no cross-power offset
+for the anchor to remove; it adds one instead. The criterion rejects it.
 
-The reason is visible in the development data rather than in the model.
-The gradient-edge label widths barely change with laser power (medians
-0.741 / 0.773 / 0.804 mm from 200 to 400 W), so there is no cross-power
-level shift for the anchor to remove; the anchor instead injects a power
-dependence that these targets do not have. The bootstrap criterion
-correctly rejects it.
+![v3 MAE ladder](outputs/figures/final_track21_v3/final_track21_v3_mae_ladder.png)
+
+![v3 predictions](outputs/figures/final_track21_v3/final_track21_v3_predictions.png)
+
+![v3 calibration](outputs/figures/final_track21_v3/final_track21_v3_calibration.png)
 
 ### Sensitivity study: validity-run labels
 
-`scripts/run_sensitivity_validity_run_labels_v2.py` repeats the evaluation
-under an alternative label estimator that tracks the resolidified band
-directly (the interferometer's valid-pixel fraction is near-binary across
-the smooth track / rough substrate transition). Under this definition the
-widths are strongly power-dependent (dev medians 1.031 / 0.858 / 0.722 mm;
-track 21: 0.485 mm), the anchor calibrates cleanly (c* = 1400, k* = 0.859,
-dev ratio CV 2.6%), and the same frozen model settings give, on 362
-track-21 bins:
+The same frozen settings, evaluated under an alternative label estimator
+that follows the resolidified band directly (the interferometer's per-y
+valid-pixel fraction is near-binary across the track edge). These widths
+do change with power (dev 1.031 / 0.858 / 0.722 mm; track 21: 0.485 mm)
+and the anchor calibrates cleanly (c* = 1400, k* = 0.859, ratio CV 2.6%).
+On 362 track-21 bins:
 
 | Model | MAE |
 |---|---:|
@@ -166,18 +152,12 @@ track-21 bins:
 | anchor_only | 0.0834 mm |
 | anchor_residual | 0.1135 mm (90% coverage 0.906) |
 
-dMAE = 0.266 mm (70.1%), 95% CI [0.249, 0.281]:
+dMAE = 0.266 mm (70.1%), CI [0.249, 0.281]: **CONFIRMED.**
 
-**ANCHOR IMPROVEMENT CONFIRMED ON TRACK 21 (sensitivity cohort)**
-
-Taken together, the two runs say something concrete about this dataset:
-the two label estimators measure different physical bands. Gradient-edge
-labels are nearly power-invariant; validity-run labels follow the
-solidification band, which the melt-pool isotherm predicts across a 2x
-power range. Which method "works" depends on which band the challenge
-means by "width". Both results, with all constants and hashes, live under
-`outputs/models/final_height_width_v2/` and
-`outputs/figures/final_track21_v3/`.
+The two estimators measure different bands. Gradient-edge widths are
+nearly power-invariant; validity-run widths follow the solidification
+band, which the melt-pool isotherm predicts across a 2x power range.
+Whether the anchor helps depends on which band "width" means.
 
 ### v2 reproduction
 
@@ -188,9 +168,9 @@ python3 scripts/run_final_track21_height_width_test_v3.py
 python3 scripts/run_sensitivity_validity_run_labels_v2.py
 ```
 
-The v2 lock hash is
+v2 lock hash:
 `8f18122e2192d714ce2e8b3766c3e993ac15d933df2b1fd7c191c274082622de`.
-A LaTeX report source is provided under `report/`.
+LaTeX report source under `report/`.
 
 ## Reproducibility and integrity
 
